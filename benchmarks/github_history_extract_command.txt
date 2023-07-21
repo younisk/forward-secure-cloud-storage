@@ -1,0 +1,8 @@
+Extract benchmark from git history
+
+git log --name-status --reverse -M100% | grep -E "^(M|A|D|R)[0-9]*\s"
+
+# to replace whitespaces and other unwanted symbols in filenames
+ sed -i "" "s/ /-/g" file
+ sed -i "" "s/,/-/g" file
+ sed -i "" "s/|/-/g" file
